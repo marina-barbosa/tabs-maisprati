@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+
+
+:root {
+  --black0: #000000;
+  --black1: #1b1a21;
+  --black2: #232229;
+  --white1: #eeeeee;
+  --grey1: #dddddd;
+  --green1: #00d782;
+  --green2: #779d9f;
+  --green3: #746c07;
+  --green4: #9a8f09;
+  --green5: #53702a;
+  --orange: #ffa500;
+  --dinamic1: #779d9f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Source Code Pro", monospace;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-decoration: none;
+  list-style: none;
+  transition: all 0.3s ease-in-out;
+}
+
+body {
+  height: 100vh;
+}
+
+header {
+  height: 90px;
+  display: flex;
+  place-items: center;
+  background-color: var(--black1);
+}
+
+.logo {
+  margin: 0 auto;
+}
+
+main {
+  margin-inline: auto;
+  margin-top: 50px;
+  width: 602px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  border: 1px var(--grey1) solid;
+}
+
+.wrap {
+  padding: 20px;
+  width: 602px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav {
+  width: 100%;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  gap: 5px;
+}
+
+nav ul li {
+  width: 100%;
+  height: 35px;
+  padding-inline: 15px;
+  padding-block: 5px;
+  cursor: pointer;
+  border-radius: 8px 8px 0 0;
+  color: var(--grey1);
+  transition: background-color 0.3s ease;
+}
+
+nav ul li:hover {
+  color: var(--dinamic1);
+  background-color: var(--grey1);
+}
+
+nav ul li.active:hover {
+  font-weight: bolder;
+  color: var(--white1);
+  font-size: 17px;
+}
+
+
+nav ul .active {
+  background-color: var(--dinamic1);
+  color: var(--white1);
+  transition: 0.5s;
+  border-top: 4px var(--orange) solid;
+}
+
+nav ul .active:hover {
+  background-color: var(--dinamic1);
+}
+
+.content {
+  width: 100%;
+  position: relative;
+  transition: opacity 0.5s ease-in-out;
+}
+
+
+#content {
+  display: flex;
+  place-items: center;
+  background-color: var(--dinamic1);
+  padding-block: 25px;
+  border-radius: 0 0 8px 8px;
+  height: 400px;
+  width: 100%;
+  transition: background-color 1s ease-in-out;
+}
+
+p {
+  margin-inline: auto;
+}
+
+img {
+  margin: 0 auto;
+}
+
+.img {
+  width: 300px;
+  margin-inline: auto;
+  border-radius: 8px;
+}
+
+.stairs {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  z-index: 50;
+}
+
+.stairs span {
+  /* border: 1px orange solid; */
+  background-color: var(--dinamic1);
+  width: 100%;
+  height: 0;
+  transition: background-color 0.5s ease-in-out, height 0.5s ease-in-out;
+}
+
+.stairs span.expand {
+  height: 100%;
+}
+
+.hidden {
+  opacity: 0;
+}
