@@ -162,3 +162,32 @@ img {
 .hidden {
   opacity: 0;
 }
+
+@media screen and (max-width: 602px) {
+
+  main,
+  .wrap {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 321px) {
+
+  * {
+    font-size: 14px;
+  }
+
+  nav ul li.active:hover {
+    font-size: 14px;
+  }
+
+  main,
+  .wrap {
+    padding: 10px;
+  }
+
+  .img {
+    width: 100%;
+  }
+}
